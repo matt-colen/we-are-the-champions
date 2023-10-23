@@ -1,0 +1,118 @@
+/* VARIABLES  */
+:root {
+  /* Background colors  */
+  --background-body: #1b1924;
+  --background-card: #fff;
+  --background-input: #444059;
+  --background-btn: #28a9f1;
+  --background-btn-hover: hsl(201, 98%, 45%);
+  /* Text colors  */
+  --color-primary: var(--background-card);
+  --color-card: var(--background-body);
+  --color-likes: #000;
+  --color-input: #8f8f8f;
+  --color-btn: #04131c;
+  /* Fonts  */
+  --font-primary: "Josefin Sans", sans-serif;
+  --font-text-input: "Inter", sans-serif;
+  /* Radius  */
+  --radius: 8px;
+  /* Spacing  */
+  --spacing-xs: 9px;
+  --spacing-s: 16px;
+  --spacing-m: 32px;
+}
+
+/* UTILITY CLASSES */
+.fully-flexed {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-column {
+  flex-flow: column;
+}
+
+.hidden {
+  display: none;
+}
+
+/* GENERAL SETUP */
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  padding: 80px 32px;
+  background: var(--background-body);
+  color: var(--color-primary);
+  gap: 19px;
+  font-family: var(--font-primary);
+  user-select: none;
+}
+
+/* HEADER  */
+.logo {
+  width: 90px;
+}
+
+header {
+  gap: var(--spacing-s);
+}
+
+.main-header {
+  font-size: 1.56rem;
+  font-weight: 700px;
+}
+
+/* User input section  */
+.user-input {
+  gap: var(--spacing-s);
+}
+
+.text-input {
+  border: none;
+  border-radius: var(--radius);
+  background: var(--background-input);
+  color: var(--color-input);
+  font-family: var(--font-text-input);
+  font-size: 1.2rem;
+  min-height: 50px;
+  padding: 13px 17px;
+}
+
+.endorsement {
+  width: 100%;
+  height: 150px;
+  resize: none; /* Removes resize handle */
+}
+
+.from-to-container {
+  gap: var(--spacing-s);
+}
+
+.from-to-container input {
+  max-width: 250px;
+}
+
+.btn-primary {
+  align-self: flex-start;
+  height: 50px;
+  border: none;
+  border-radius: var(--radius);
+  padding: 16px 32px;
+  background: var(--background-btn);
+  color: var(--color-btn);
+  text-align: center;
+  font-family: var(--font-primary);
+  font-size: 1.375rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-primary:hover {
+  background: var(--background-btn-hover);
+}
