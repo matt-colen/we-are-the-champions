@@ -31,6 +31,7 @@
 }
 
 .flex-column {
+  display: flex;
   flex-flow: column;
 }
 
@@ -48,9 +49,19 @@ body {
   padding: 80px 32px;
   background: var(--background-body);
   color: var(--color-primary);
-  gap: 19px;
+  gap: var(--spacing-m);
   font-family: var(--font-primary);
   user-select: none;
+}
+
+main {
+  gap: var(--spacing-m);
+  width: 500px;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
 }
 
 /* HEADER  */
@@ -68,7 +79,7 @@ header {
 }
 
 /* User input section  */
-.user-input {
+.user-input-container {
   gap: var(--spacing-s);
 }
 
@@ -83,7 +94,7 @@ header {
   padding: 13px 17px;
 }
 
-.endorsement {
+.endorsement-input {
   width: 100%;
   height: 150px;
   resize: none; /* Removes resize handle */
@@ -93,8 +104,8 @@ header {
   gap: var(--spacing-s);
 }
 
-.from-to-container input {
-  max-width: 250px;
+input {
+  width: 50%;
 }
 
 .btn-primary {
@@ -115,4 +126,35 @@ header {
 
 .btn-primary:hover {
   background: var(--background-btn-hover);
+}
+
+/* Endorsements section  */
+.endorsement-container {
+  width: 100%;
+  gap: var(--spacing-m);
+  align-items: stretch;
+}
+
+.section-header {
+  align-self: center;
+}
+
+.endorsement-cards__list {
+  gap: var(--spacing-s);
+  font-family: var(--font-text-input);
+  font-size: 0.875rem;
+}
+
+.card {
+  width: 100%;
+  background: var(--background-card);
+  color: var(--color-card);
+  padding: var(--spacing-s);
+  gap: var(--spacing-s);
+  border-radius: var(--radius);
+}
+
+.to,
+.from {
+  font-weight: bold;
 }

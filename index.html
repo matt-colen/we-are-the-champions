@@ -28,19 +28,39 @@
     </header>
 
     <!-- Main  -->
-    <main>
+    <main class="fully-flexed flex-column">
       <!-- User input section  -->
-      <section class="user-input fully-flexed flex-column">
+      <section class="user-input-container fully-flexed flex-column">
         <textarea
-          class="endorsement text-input"
-          id="endorsement"
+          class="endorsement-input text-input"
+          id="endorsement-input"
           placeholder="Write your endorsement here"
         ></textarea>
         <div class="from-to-container fully-flexed">
-          <input class="from-input text-input" type="text" placeholder="From" />
-          <input class="to-input text-input" type="text" placeholder="To" />
+          <input
+            class="from-input text-input"
+            id="from-input"
+            type="text"
+            placeholder="From"
+          />
+          <input
+            class="to-input text-input"
+            id="to-input"
+            type="text"
+            placeholder="To"
+          />
         </div>
-        <button class="btn-primary">Publish</button>
+        <button id="publish-btn" class="btn-primary">Publish</button>
+      </section>
+      <!-- Endorsements section  -->
+      <section class="endorsement-container fully-flexed flex-column">
+        <h2 class="section-header">- Endorsements -</h2>
+        <div class="endorsement-cards__container">
+          <ul
+            class="endorsement-cards__list flex-column"
+            id="endorsement-cards__list"
+          ></ul>
+        </div>
       </section>
     </main>
   </body>
