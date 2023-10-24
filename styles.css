@@ -158,3 +158,11 @@ input {
 .from {
   font-weight: bold;
 }
+
+.to::before {
+  content: "To: ";
+}
+
+.from::before {
+  content: "From: ";
+}

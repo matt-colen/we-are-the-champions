@@ -42,9 +42,10 @@ const addEndorsementToDB = () => {
 onValue(endoresementsInDB, (snapshot) => {
   if (snapshot.exists()) {
     const snapshotValue = snapshot.val();
-    const snapshotValueArray = Object.values(snapshotValue);
+    const snapshotValuesArray = Object.values(snapshotValue).reverse();
+    const reversedSnapshotArray = snapshotValuesArray.reverse();
 
-    renderCards(snapshotValueArray);
+    renderCards(reversedSnapshotArray);
   } else {
     endorsementList.textContent = "No endorsements yet";
   }
