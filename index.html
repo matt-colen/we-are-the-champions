@@ -16,6 +16,7 @@
     <!-- Scripts -->
     <script src="index.js" type="module" defer></script>
   </head>
+
   <body class="fully-flexed flex-column">
     <!-- Header  -->
     <header class="fully-flexed flex-column">
@@ -28,39 +29,35 @@
     </header>
 
     <!-- Main  -->
-    <main class="fully-flexed flex-column">
+    <main class="flex-column">
       <!-- User input section  -->
-      <section class="user-input-container fully-flexed flex-column">
+      <section class="user-input__container flex-column">
         <textarea
-          class="endorsement-input text-input"
-          id="endorsement-input"
+          class="user-input__endorsement text-input"
+          id="user-input__endorsement"
           placeholder="Write your endorsement here"
         ></textarea>
-        <div class="from-to-container fully-flexed">
+        <div class="message-details__container fully-flexed">
           <input
-            class="from-input text-input"
-            id="from-input"
+            class="message-details__from text-input"
+            id="message-details__from"
             type="text"
             placeholder="From"
           />
           <input
-            class="to-input text-input"
-            id="to-input"
+            class="message-details__to text-input"
+            id="message-details__to"
             type="text"
             placeholder="To"
           />
         </div>
         <button id="publish-btn" class="btn-primary">Publish</button>
       </section>
+
       <!-- Endorsements section  -->
-      <section class="endorsement-container fully-flexed flex-column">
-        <h2 class="section-header">- Endorsements -</h2>
-        <div class="endorsement-cards__container">
-          <ul
-            class="endorsement-cards__list flex-column"
-            id="endorsement-cards__list"
-          ></ul>
-        </div>
+      <section class="endorsement__container flex-column">
+        <h2 class="endorsements__header">- Endorsements -</h2>
+        <ul class="endorsement__list flex-column" id="endorsement__list"></ul>
       </section>
     </main>
   </body>

@@ -17,10 +17,10 @@ const app = initializeApp(appSettings);
 const database = getDatabase(app);
 const endoresementsInDB = ref(database, "endorsements");
 
-const endorsementInput = document.querySelector("#endorsement-input");
-const fromInput = document.querySelector("#from-input");
-const toInput = document.querySelector("#to-input");
-const endorsementList = document.querySelector("#endorsement-cards__list");
+const endorsementInput = document.querySelector("#user-input__endorsement");
+const fromInput = document.querySelector("#message-details__from");
+const toInput = document.querySelector("#message-details__to");
+const endorsementList = document.querySelector("#endorsement__list");
 const publishBtn = document.querySelector("#publish-btn");
 
 // Function that pushes the endorsement object to the DB
