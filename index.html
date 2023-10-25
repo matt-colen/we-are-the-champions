@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Metadata  -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>We are the Champions</title>
@@ -18,7 +19,6 @@
   </head>
 
   <body class="fully-flexed flex-column">
-    <!-- Header  -->
     <header class="fully-flexed flex-column">
       <img
         class="logo"
@@ -28,29 +28,31 @@
       <h1 class="main-header">We are the Champions</h1>
     </header>
 
-    <!-- Main  -->
     <main class="flex-column">
       <!-- User input section  -->
       <section class="user-input__container flex-column">
-        <textarea
-          class="user-input__endorsement text-input"
-          id="user-input__endorsement"
-          placeholder="Write your endorsement here"
-        ></textarea>
-        <div class="message-details__container fully-flexed">
-          <input
-            class="message-details__from text-input"
-            id="message-details__from"
-            type="text"
-            placeholder="From"
-          />
-          <input
-            class="message-details__to text-input"
-            id="message-details__to"
-            type="text"
-            placeholder="To"
-          />
+        <div class="message__container flex-column">
+          <textarea
+            class="user-input__endorsement text-input"
+            id="user-input__endorsement"
+            placeholder="Write your endorsement message here"
+          ></textarea>
+          <div class="message-details__container fully-flexed">
+            <input
+              class="message-details__from text-input"
+              id="message-details__from"
+              type="text"
+              placeholder="From"
+            />
+            <input
+              class="message-details__to text-input"
+              id="message-details__to"
+              type="text"
+              placeholder="To"
+            />
+          </div>
         </div>
+
         <button id="publish-btn" class="btn-primary">Publish</button>
       </section>
 
