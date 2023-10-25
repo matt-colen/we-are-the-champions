@@ -34,6 +34,7 @@ const addEndorsementToDB = () => {
     message: endorsementInputValue,
     from: fromInputValue,
     to: toInputValue,
+    favorites: 0,
   };
 
   // Pushes the endorsement obj to the DB
@@ -59,7 +60,7 @@ onValue(endorsementListInDB, (snapshot) => {
     const snapshotValuesArray = Object.values(snapshotValue);
     const reversedSnapshotArray = snapshotValuesArray.reverse(); // Ensures that the newest endorsement shows first
 
-    renderCards(reversedSnapshotArray);
+    renderCards(reversedSnapshotArray, snapshotValue);
   } else {
     endorsementList.textContent =
       "No endorsements yet, add a message for your team 🥳";
@@ -67,11 +68,11 @@ onValue(endorsementListInDB, (snapshot) => {
 });
 
 // Function that renders the endorsement cards
-const renderCards = (array) => {
+const renderCards = (array, snapshotVal) => {
   clearList(); // Clears existing list
 
   const cards = array.map((obj) => {
-    return createCard(obj);
+    return createCard(obj, snapshotVal);
   });
 
   cards.forEach((card) => endorsementList.append(card));
@@ -82,7 +83,9 @@ const renderCards = (array) => {
 };
 
 // Function that creates the endorsement cards
-const createCard = (obj) => {
+const createCard = (obj, snapshot) => {
+  let snapshotKeys = Object.keys(snapshot);
+  const cardId = (snapshotKeys = snapshotKeys.join(""));
   const objEntries = Object.entries(obj);
   const card = document.createElement("li");
   let cardContents = "";
@@ -99,6 +102,7 @@ const createCard = (obj) => {
   });
 
   card.innerHTML += cardContents + heartIcon;
+  card.id = cardId;
   card.className = "card flex-column";
 
   return card;
