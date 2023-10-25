@@ -89,6 +89,11 @@ header {
   font-size: 1.2rem;
   min-height: 50px;
   padding: 13px 17px;
+  transition: all .2s;
+}
+
+.text-input:hover {
+  transform: scale(1.01);
 }
 
 .message__container {
@@ -163,4 +168,28 @@ input[type="text"] {
 
 .from::before {
   content: "From: ";
+}
+
+@media only screen and (max-width: 550px) {
+  body {
+    padding: var(--spacing-m) var(--spacing-s);
+  }
+  main {
+    width: 100%;
+  }
+  .main-header {
+    text-align: center;
+  }
+  .user-input__endorsement {
+    height: 15vh;
+  }
+  .message-details__container {
+    flex-flow: column;
+  }
+  input[type="text"] {
+    width: 100%;
+  }
+  .btn-primary {
+    width: 100%;
+  }
 }
