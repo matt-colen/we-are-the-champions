@@ -117,14 +117,21 @@ const clearInputs = () => {
 };
 
 // Function that adds or removes the "clicked-icon" class
-const toggleIconClass = (clickedIcon) => {
-  clickedIcon.classList.toggle("clicked-icon");
+const toggleIconClass = (clickedIconBtn) => {
+  // Targets the svg for each clicked btn
+  const svg = clickedIconBtn.querySelector(":first-child");
+
+  svg.classList.toggle("clicked-icon"); // Toggles a class that fills/un-fills the vector
 };
 
 const setHeartIconListeners = () => {
-  const heartIcons = document.querySelectorAll(".heart-icon");
+  // Selects the buttons that contain the heart icons
+  const heartIconContainers = document.querySelectorAll(
+    ".heart-icon__container"
+  );
 
-  heartIcons.forEach((icon) => {
+  // Adds a click listener for each button
+  heartIconContainers.forEach((icon) => {
     icon.addEventListener("click", (e) => {
       toggleIconClass(e.target);
     });

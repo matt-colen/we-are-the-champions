@@ -183,11 +183,11 @@ input[type="text"] {
   padding: var(--spacing-s);
 }
 
-.heart-icon {
-  transition: all 0.2s;
+.heart-icon,
+.heart-icon path {
+  pointer-events: none;
 }
 
-.heart-icon:hover,
 .clicked-icon {
   fill: black;
 }
