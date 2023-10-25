@@ -89,7 +89,7 @@ header {
   font-size: 1.2rem;
   min-height: 50px;
   padding: 13px 17px;
-  transition: all .2s;
+  transition: all 0.2s;
 }
 
 .text-input:hover {
@@ -155,6 +155,7 @@ input[type="text"] {
   gap: var(--spacing-s);
   border-radius: var(--radius);
   text-align: left;
+  position: relative;
 }
 
 .to,
@@ -170,6 +171,28 @@ input[type="text"] {
   content: "From: ";
 }
 
+.heart-icon__container {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  background: none;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  border: none;
+  padding: var(--spacing-s);
+}
+
+.heart-icon {
+  transition: all 0.2s;
+}
+
+.heart-icon:hover,
+.clicked-icon {
+  fill: black;
+}
+
+/* Media queries  */
 @media only screen and (max-width: 550px) {
   body {
     padding: var(--spacing-m) var(--spacing-s);
