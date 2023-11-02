@@ -28,8 +28,19 @@ const captureInputValues = () => {
   const endorsementInputValue = endorsementInput.value;
   const fromInputValue = fromInput.value;
   const toInputValue = toInput.value;
+  const errorText = document.querySelector("#error-text");
 
-  createEndorsementObj(endorsementInputValue, fromInputValue, toInputValue);
+  if ((endorsementInputValue, fromInputValue, toInputValue)) {
+    const endorsementInputValue = endorsementInput.value;
+    const fromInputValue = fromInput.value;
+    const toInputValue = toInput.value;
+
+    errorText.classList.add("hidden");
+
+    createEndorsementObj(endorsementInputValue, fromInputValue, toInputValue);
+  } else {
+    errorText.classList.remove("hidden");
+  }
 };
 
 // Creates a new object to contain the captured input field values
@@ -38,7 +49,7 @@ const createEndorsementObj = (endorsementVal, fromVal, toVal) => {
     message: endorsementVal,
     from: fromVal,
     to: toVal,
-    favorites: 0,
+    likes: 0, // Initial likes count is set to 0
   };
 
   addEndorsementToDB(endorsement);

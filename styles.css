@@ -36,6 +36,19 @@
   flex-flow: column;
 }
 
+.error-text {
+  color: #f00;
+  background: var(--background-card);
+  border-radius: var(--radius);
+  padding: var(--spacing-s);
+  font: var(--font-secondary);
+  font-size: 1.25rem;
+}
+
+.hidden {
+  display: none;
+}
+
 /* GENERAL SETUP */
 * {
   box-sizing: border-box;
