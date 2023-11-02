@@ -33,32 +33,31 @@
       <section class="user-input__container flex-column">
         <div class="message__container flex-column">
           <textarea
-            class="user-input__endorsement text-input"
-            id="user-input__endorsement"
+            class="message__endorsement text-input"
+            id="message__endorsement"
             placeholder="Write your endorsement message here"
           ></textarea>
-          <div class="message-details__container fully-flexed">
+          <div class="message__details fully-flexed">
             <input
-              class="message-details__from text-input"
-              id="message-details__from"
+              class="message__details--from text-input"
+              id="message__details--from"
               type="text"
               placeholder="From"
             />
             <input
-              class="message-details__to text-input"
-              id="message-details__to"
+              class="message__details--to text-input"
+              id="message__details--to"
               type="text"
               placeholder="To"
             />
           </div>
         </div>
-
         <button id="publish-btn" class="btn-primary">Publish</button>
       </section>
 
       <!-- Endorsements section  -->
       <section class="endorsement__container flex-column">
-        <h2 class="endorsements__header">- Endorsements -</h2>
+        <h2 class="endorsement__header">- Endorsements -</h2>
         <ul class="endorsement__list flex-column" id="endorsement__list"></ul>
       </section>
     </main>
